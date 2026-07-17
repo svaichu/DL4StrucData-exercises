@@ -16,3 +16,4 @@ venv/
 checkpoints/
 .ipynb_checkpoints/
 wandb/*
+fdca/exp-1/wandb/*

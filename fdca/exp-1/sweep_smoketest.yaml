@@ -1,0 +1,71 @@
+command:
+- ${env}
+- /home/yn030245/DL4StrucData-exercises/.venv/bin/python
+- ${program}
+- ${args}
+count: 2
+method: random
+metric:
+  goal: minimize
+  name: final_pred_mse
+name: fdca-exp1-jepa-sweep
+parameters:
+  batch_size:
+    value: 256
+  ckpt_dir:
+    value: checkpoints_jepa_sweep
+  cov_coeff:
+    values:
+    - 0.1
+    - 1.0
+    - 5.0
+  d_z:
+    value: 16
+  device:
+    value: cuda
+  ema_decay:
+    values:
+    - 0.9
+    - 0.99
+    - 0.996
+    - 0.999
+  grad_clip:
+    value: 1.0
+  hidden:
+    values:
+    - 32
+    - 64
+    - 128
+  lr:
+    values:
+    - 1e-4
+    - 3e-4
+    - 1e-3
+  n_chains:
+    value: 8
+  obs_dim:
+    value: 32
+  p1_epochs:
+    value: 3
+  seed:
+    value: 42
+  seq_len:
+    value: 64
+  steps_per_epoch:
+    value: 20
+  var_coeff:
+    values:
+    - 1.0
+    - 5.0
+    - 25.0
+    - 50.0
+  var_gamma:
+    value: 1.0
+  wandb_project:
+    value: fdca-exp1-jepa-sweep-smoketest
+  wd:
+    values:
+    - 0.0
+    - 1e-4
+    - 1e-3
+program: sweep_agent.py
