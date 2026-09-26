@@ -1,0 +1,7 @@
+wandb: Creating sweep from: sweep_v2.yaml
+wandb: WARNING Malformed sweep config detected! This may cause your sweep to behave in unexpected ways.
+wandb: WARNING To avoid this, please fix the sweep config schema violations below:
+wandb: WARNING   Violation 1. Additional properties are not allowed ('count' was unexpected)
+wandb: Creating sweep with ID: ly8q214a
+wandb: View sweep at: https://wandb.ai/svaichu/DL4StrucData-exercises-fdca_exp-1/sweeps/ly8q214a
+wandb: Run sweep agent with: wandb agent svaichu/DL4StrucData-exercises-fdca_exp-1/ly8q214a
